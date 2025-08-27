@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="ETH Hbb analyses knowledge-base">
+      
+      
+        <meta name="author" content="ETH Prof. Wallny's group">
+      
+      
+        <link rel="canonical" href="https://https:/franzglessgen.github.io/VHbb/UL/EFT/lgbm/">
+      
+      
+        <link rel="prev" href="../Intro/">
+      
+      
+        <link rel="next" href="../reweighting/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>LGBM - ETH Hbb analyses knowledge-base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/fonts.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vhbblightgbm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="ETH Hbb analyses knowledge-base" class="md-header__button md-logo" aria-label="ETH Hbb analyses knowledge-base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ETH Hbb analyses knowledge-base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LGBM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/franzglessgen/MyMkDocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ETH-Hbb-analyses-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ETH Hbb analyses knowledge-base" class="md-nav__button md-logo" aria-label="ETH Hbb analyses knowledge-base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ETH Hbb analyses knowledge-base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/franzglessgen/MyMkDocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ETH-Hbb-analyses-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VHbb
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            VHbb
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UL analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            UL analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EFT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            EFT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    LGBM
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    LGBM
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROOT compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-and-plotting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training and plotting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-all-eft-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training all EFT components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asimov-sensitivity-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asimov sensitivity studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asimov sensitivity studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regressor-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regressor Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regressor Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eft-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFT scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EFT scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eft-weight-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFT weight scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#likelihood-ratio-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Likelihood ratio scaling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-1d-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimal 1D scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-llh-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      2D LLH scans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge scans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge matrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiled-llh-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profiled LLH scans
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reweighting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reweighting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systematics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROOT compatibility
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Training">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-and-plotting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training and plotting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training-all-eft-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Training all EFT components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asimov-sensitivity-studies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asimov sensitivity studies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Asimov sensitivity studies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regressor-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regressor Collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regressor Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eft-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFT scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EFT scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eft-weight-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFT weight scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#likelihood-ratio-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Likelihood ratio scaling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimal-1d-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimal 1D scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2d-llh-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      2D LLH scans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge scans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge matrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiled-llh-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profiled LLH scans
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="vhbblightgbm">vhbbLightGBM<a class="headerlink" href="#vhbblightgbm" title="Permanent link">#</a></h1>
+<p>Workflow for training, evaluation and optimization of the Boosted Information Tree (BIT) as described here and there (ref)</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h2>
+<p>LightGBM can only be run in a python 3 environment. </p>
+<p>To source the conda environment on tier3, execute the following command:</p>
+<pre><code>PATH=/work/${USER}/miniconda3/bin:${PATH}
+</code></pre>
+<p>For details: </p>
+<pre><code>https://wiki.chipp.ch/twiki/bin/view/CmsTier3/HowToSetupYourAccount#local_Anaconda_Conda_installatio
+</code></pre>
+<h2 id="root-compatibility">ROOT compatibility<a class="headerlink" href="#root-compatibility" title="Permanent link">#</a></h2>
+<p>The training and optimization of the BIT does not require ROOT. However, for the eval step in Xbb the ROOT and python versions have to be compatible.
+Such a match between versions can be obtained by forging ROOT in a conda environment:</p>
+<p>Reference: https://iscinumpy.gitlab.io/post/root-conda/</p>
+<pre><code>conda create -n my_root_env root -c conda-forge
+</code></pre>
+<pre><code>conda activate my_root_env
+</code></pre>
+<pre><code>conda config --env --add channels conda-forge
+</code></pre>
+<p>You might need to add the extra packages like matplotlib, pandas, ... in the environment.</p>
+<p>This environment has a built-in pyroot3 version. </p>
+<p>Since you do not want to source the global tier3 CMSSW environment (it would overide your conda env), you need to run</p>
+<pre><code>export CMSSW_BASE={your_path}/CMSSW/
+</code></pre>
+<p>for setting the paths.</p>
+<p>Everytime you start a tier3 session, the following steps need to be taken:</p>
+<p>To get out of the default tier3 conda env</p>
+<pre><code>conda deactivate
+</code></pre>
+<pre><code>conda activate
+</code></pre>
+<p>Enter the pyroot3/py3 env</p>
+<pre><code>conda activate my_root_env
+</code></pre>
+<h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">#</a></h2>
+<h4 id="export">Export<a class="headerlink" href="#export" title="Permanent link">#</a></h4>
+<p>Choose the features you need for the training in training.ini and make sure that the List_for_submitscript variable is set to the training region you want (resolved or boosted).</p>
+<pre><code>./submit.py -T Zll2018 -F cachetraining-BIT -J cachetraining --queue veryshort.q
+</code></pre>
+<p>Export the data as an h5 file</p>
+<pre><code>./submit.py -T Zll2018 -J export_h5 -i
+</code></pre>
+<h4 id="setup_1">Setup<a class="headerlink" href="#setup_1" title="Permanent link">#</a></h4>
+<p>Clone the repository and cd into it</p>
+<pre><code>git clone https://github.com/franzglessgen/vhbbLightGBM.git
+</code></pre>
+<p>Check your conda env by executing the training and saving it</p>
+<pre><code>python train.py -i ../dumps/DUMPNAME.h5 -name BITNAME_ -WC 1 -quad -train
+</code></pre>
+<p>This last command executes the training for a specified EFT component. The command line argument -WC defines the EFT index that is to be trained. The indexing is the same as in the reweighting card:</p>
+<pre><code>[0:'cHj1', 
+ 1:'cHj3', 
+ 2:'cHu', 
+ 3:'cHd', 
+ 4:'cHudRe', 
+ 5:'cHudIm', 
+ 6:'cHW', 
+ 7:'cHWtil', 
+ 8:'cHB', 
+ 9:'cHBtil', 
+ 10:'cHWB', 
+ 11:'cHWBtil', 
+ 12:'cHbox', 
+ 13:'cHDD', 
+ 14:'cbHRe', 
+ 15:'cbHIm']
+</code></pre>
+<p>Examples: -WC 1 -quad trains the quadratic component of cHj3. -WC 1,2 -quad trains the interaction term between cHj1 and cHu. -WC 1 (no -quad) trains the linear component of cHj3.</p>
+<p>The training also generates the result directories:</p>
+<ul>
+<li>trainings : saves the training arrays for this EFT component</li>
+<li>checkpoints : saves the BIT model for this EFT component</li>
+<li>plots</li>
+</ul>
+<h4 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">#</a></h4>
+<p>In order to increase the statistical power of the training, the 4 years will be merged for training in each channel. A dedicated module dataMerger is used for the merging and to check that the distributions of features match across years.
+The command for merging 4 datasets that correspond to the exports of each year is the following:</p>
+<pre><code>python train.py -merger_input ../dumps/BIT_SRlowmedhigh_fullSet_Zll -merger_name BIT_SRlowmedhigh_fullSet_Zll -merge
+</code></pre>
+<p>For the command to work, the h5 files have to be named PREFIXYEAR, in this case:</p>
+<pre><code>BIT_SRlowmedhigh_fullSet_Zll2016.h5
+</code></pre>
+<p>for the 2016 dataset and similarly for the other years. The command loads the features for each year separately. The features as well as the weights can then be compared across years. </p>
+<h4 id="training-and-plotting">Training and plotting<a class="headerlink" href="#training-and-plotting" title="Permanent link">#</a></h4>
+<p>The previous command loads the data from the h5 file, cleans the feature names and selects the features that are listed in the dictionary "feature_dict" in feature_config.py or feature_config_boost.py.
+Only the features listed in this dictionary with a key matching exactly the cleaned up name of the imported features will be considered. The dictionary also renames the features for more clarity. 
+The muons and electron features are then merged in a lepton category.</p>
+<p>The training parameters can be changed in the command line </p>
+<ul>
+<li>num_leaves</li>
+<li>max_depth</li>
+<li>min_data_in_leaf</li>
+<li>learning_rate</li>
+<li>max_bin (Light GBM binning of the features)</li>
+</ul>
+<p>If the -train argument is absent from the command line, the training will be loaded from a checkpoint (defined by the name used in the training with the -name argument).</p>
+<p>A few functions should be called to check the quality of the training:</p>
+<ul>
+<li>plot_features</li>
+<li>plot_weights: plots EFT weights used in training</li>
+<li>plot_score: plots output distribution for SIG and BG</li>
+<li>plot_feature_importance</li>
+<li>plot_all_profiled_features : plots the output score, profiled in the features to check the agreement between detector level quantities and joint quantities.</li>
+<li>plot_metrics : plots the loss function </li>
+</ul>
+<p>Additional function are available like plotting the BIT parameters or the correlation matrix of features, ...</p>
+<h4 id="training-all-eft-components">Training all EFT components<a class="headerlink" href="#training-all-eft-components" title="Permanent link">#</a></h4>
+<p>A simple script can be executed to perform the training for all EFT components. </p>
+<p>The command is </p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -train
+</code></pre>
+<p>The naming scheme of the h5 files (the Cuts) are hard-coded for boosted and resolved in the script RunTrainings.py.</p>
+<p>In this case the cuts are:</p>
+<pre><code>Cuts = [&quot;SRlowmedhigh_noDNNcut_allfeatures&quot;, &quot;boosted_noDNNcut_allfeatures&quot;]
+</code></pre>
+<p>So the dump file is named:</p>
+<pre><code>prefix + cut
+Zll2018_BIT_SRlowmedhigh_noDNNcut_allfeatures
+</code></pre>
+<p>This command then performs <span class="arithmatex">\(2N + \frac{N(N-1)}{2}\)</span> trainings, where N is the number of WC (defined by the indices).</p>
+<p>To obtain all plots related to the trainings do </p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -plot_training
+</code></pre>
+<p>The submission script actually runs the function gridsearch() which does a hyperparameter optimization on the fly and runs the training with the best parameters. The definition of the parameter grid is hard coded in "grid search".
+Because of the many trainings of this grid search, the resolved training might take a while (run on standard partition, should be done under 2 hours).</p>
+<p>Small issue with the training of the mixed component of chj1 and cHWtilde (c0 and c7).</p>
+<h2 id="asimov-sensitivity-studies">Asimov sensitivity studies<a class="headerlink" href="#asimov-sensitivity-studies" title="Permanent link">#</a></h2>
+<p>Once the individual trainings are done, they can be gathered for the Asimov studies.</p>
+<h3 id="regressor-collection">Regressor Collection<a class="headerlink" href="#regressor-collection" title="Permanent link">#</a></h3>
+<p>The Regressor collection loads BIT regressors of multiple WC at once. It can then be used to combine the shapes and perform LLH scans</p>
+<p>The syntax is similar to the training one. The WC indices can be specified. The regressor will then contain all EFT components corresponding to those.
+The name of the RegressorCollection has to match the name of the trainings to be loaded.</p>
+<p>For more flexibility, the BIT predictions and EFT weights of the different EFT components can be saved and simply loaded.
+LLH scans can be performed, the results of which can also be saved and loaded.</p>
+<h4 id="loading">Loading<a class="headerlink" href="#loading" title="Permanent link">#</a></h4>
+<p>Three functions can be called:</p>
+<ul>
+<li>read_arrays_from_training: combine the individual EFT components into a single file</li>
+<li>save_arrays: Drops the combined trainings into a h5 file</li>
+<li>read_arrays: Only function used after calling the 2 previous one. Only reads from the combined file. </li>
+</ul>
+<p>This command has to be called once before anything else.</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -save_arrays
+</code></pre>
+<h4 id="eft-scaling">EFT scaling<a class="headerlink" href="#eft-scaling" title="Permanent link">#</a></h4>
+<p>Two different objects are needed for computing the optimal observables.</p>
+<h5 id="eft-weight-scaling">EFT weight scaling<a class="headerlink" href="#eft-weight-scaling" title="Permanent link">#</a></h5>
+<p>The scaling of the EFT number of events (differential or inclusive) is controlled by the parameter <span class="arithmatex">\(\alpha\)</span> according to this formula:</p>
+<p>$$ N_{\text{EFT}}(\vec{\alpha}) = S_0 + \sum_i S_{1i} \frac{\alpha_i}{\Lambda^2} +  \sum_{j} S_{2j} \frac{\alpha_j^2}{\Lambda^4} +  \sum_{j,k} S_{3jk} \frac{\alpha_j \alpha_k}{\Lambda^4}
+ $$</p>
+<p>The function set_alphas stores the value of each EFT coefficient. The function set_scaling_alpha then computes the scaling for each EFT component according to the formula.
+After calling those, the function compute_EFT_weights stores the EFT scaling weights for all events at the considered WC point.</p>
+<h5 id="likelihood-ratio-scaling">Likelihood ratio scaling<a class="headerlink" href="#likelihood-ratio-scaling" title="Permanent link">#</a></h5>
+<p>The template shape also scales with the WC values according to the formula:</p>
+<div class="arithmatex">\[R(x|\theta, \theta_0) = 1 + (\theta - \theta_0)_a R_a(x) + \frac{1}{2}(\theta - \theta_0)_a(\theta - \theta_0)_bR_{ab}(x)
+\]</div>
+<p>where the indices <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> run over the WC. This second type of scaling is controlled by the parameter <span class="arithmatex">\(\theta\)</span>  and can be computed in a similar way to the <span class="arithmatex">\(\alpha\)</span> scaling.</p>
+<p>The <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\theta\)</span> scaling naming will be used throughout this documentation.</p>
+<h3 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">#</a></h3>
+<p>The purpose of this analysis framework is to produce a 2D sigma matrix to choose the best 1D template shape for maximum sensitivity.</p>
+<h4 id="checks">Checks<a class="headerlink" href="#checks" title="Permanent link">#</a></h4>
+<p>You might need to produce a couple of preliminary plots to check the quality of the combined trainings.</p>
+<p>The script RunAll.py can be used to avoid lengthy command line arguments. It just needs the name of the trainings and the considered WC.</p>
+<h4 id="features-and-score">Features and score<a class="headerlink" href="#features-and-score" title="Permanent link">#</a></h4>
+<p>The command:</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -plot_template
+</code></pre>
+<p>will plot the features used in the training with the corresponding EFT effects. The EFT point is held in the dictionary WC_point_dict in scan_config. It will also plot the output shape at given <span class="arithmatex">\(\theta\)</span> and <span class="arithmatex">\(\alpha\)</span> points with a flat binning for the SM signal as well as EFT effects. </p>
+<h4 id="optimal-1d-scan">Optimal 1D scan<a class="headerlink" href="#optimal-1d-scan" title="Permanent link">#</a></h4>
+<p>To check for the consistency of the training, running 1D optimal frozen scans for each WC can be done</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -run_scans_1D
+</code></pre>
+<p>The range of the template points that will be scanned are defined in config/scan_config:</p>
+<ul>
+<li>theta_ranges : controls the range of the template shape points to try</li>
+<li>alpha_ranges : LLH range, be sure it holds the 2 sigma boundary on each WC.</li>
+</ul>
+<p>The command runs both the optimal 1D scan as well as one LLH scan for each choice of the template shape (number of <span class="arithmatex">\(\theta\)</span> points).</p>
+<p>The script CollectShapes.py also allows to run checks locally before/after submissions.
+Ex:
+- plot_sigma_variations : plots the 1D sigma scan</p>
+<h4 id="2d-llh-scans">2D LLH scans<a class="headerlink" href="#2d-llh-scans" title="Permanent link">#</a></h4>
+<p>The two following commands </p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -run_scans_2D_opt
+</code></pre>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -run_scans_2D
+</code></pre>
+<p>will run all 2D scans needed for the selection of the template shape. For the optimal ones it will produce a 2D LLH scan for each pair of WC (the template shape is optimal at each point in the 2D LLH scan).</p>
+<p>For the non-optimal ones, it will go through the whole 2D range of <span class="arithmatex">\(\theta\)</span> points : <span class="arithmatex">\(\theta_i \times \theta_j\)</span> for each pair of WC. 
+For each grid point it will produce a 2D LLH scan by changing the template shape each time.</p>
+<p>This command launches a very large number of jobs:</p>
+<div class="arithmatex">\[
+\frac{1}{2}N_{cat}N(N-1).Card[\theta_i \times \theta_j]
+\]</div>
+<h4 id="merge-scans">Merge scans<a class="headerlink" href="#merge-scans" title="Permanent link">#</a></h4>
+<p>Collect the results, fit the 1 and 2 sigma contours and produce a 2D sigma matrix for each WC pair:</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -sigma
+</code></pre>
+<h4 id="merge-matrices">Merge matrices<a class="headerlink" href="#merge-matrices" title="Permanent link">#</a></h4>
+<p>Merge matrices and choose best template. This runs locally, should be short. Except for the minimization of the contraints on the <span class="arithmatex">\(N\times N\)</span> matrix of 2D matrices.</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -merge_sigma
+</code></pre>
+<p>It also plots the chosen template shape.</p>
+<h4 id="profiled-llh-scans">Profiled LLH scans<a class="headerlink" href="#profiled-llh-scans" title="Permanent link">#</a></h4>
+<p>Produce profiled LLH scans to check the robustness of the chosen template shape
+Do a stat only floating LLH scan for all WC: the 2 sigma intervals shouldn't blow up.</p>
+<pre><code>python RunTrainings.py -prefix Zll2018_BIT_ -WC 0,1,6,7 -profiler
+</code></pre>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link">#</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
