@@ -12,25 +12,25 @@
         <meta name="author" content="Franz Glessgen">
       
       
-        <link rel="canonical" href="https://https:/franzglessgen.github.io/ProtonTherapy/Theory/BasicPhysics/">
+        <link rel="canonical" href="https://https:/franzglessgen.github.io/Software/FBP/">
       
       
-        <link rel="prev" href="../../Overview/">
+        <link rel="prev" href="../Boundary/">
       
       
-        <link rel="next" href="../../../Hardware/Overview/">
+        <link rel="next" href="../../about_me/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>Basic physics - Open source projects</title>
+        <title>Filtered backprojection - Open source projects</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -43,11 +43,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/fonts.css">
+      <link rel="stylesheet" href="../../stylesheets/fonts.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-physics" class="md-skip">
+        <a href="#filtered-backprojection" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Open source projects" class="md-header__button md-logo" aria-label="Open source projects" data-md-component="logo">
+    <a href="../.." title="Open source projects" class="md-header__button md-logo" aria-label="Open source projects" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic physics
+              Filtered backprojection
             
           </span>
         </div>
@@ -192,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Open source projects" class="md-nav__button md-logo" aria-label="Open source projects" data-md-component="logo">
+    <a href="../.." title="Open source projects" class="md-nav__button md-logo" aria-label="Open source projects" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Teaching/PhiloPhysics/" class="md-nav__link">
+      <a href="../../Teaching/PhiloPhysics/" class="md-nav__link">
         
   
   
@@ -309,20 +309,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -338,7 +336,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Proton therapy
@@ -352,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Overview/" class="md-nav__link">
+      <a href="../../ProtonTherapy/Overview/" class="md-nav__link">
         
   
   
@@ -372,20 +370,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -401,7 +397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Theory
@@ -412,32 +408,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Basic physics
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ProtonTherapy/Theory/BasicPhysics/" class="md-nav__link">
         
   
   
@@ -448,35 +422,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#scattering-power" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scattering power
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Hardware/Overview/" class="md-nav__link">
+      <a href="../../Hardware/Overview/" class="md-nav__link">
         
   
   
@@ -603,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Hardware/Calibrations/SCC/" class="md-nav__link">
+      <a href="../../Hardware/Calibrations/SCC/" class="md-nav__link">
         
   
   
@@ -638,18 +583,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -665,7 +612,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Software
@@ -679,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software/Overview/" class="md-nav__link">
+      <a href="../Overview/" class="md-nav__link">
         
   
   
@@ -699,18 +646,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -726,7 +675,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             Reconstruction algorithms
@@ -740,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Software/Boundary/" class="md-nav__link">
+      <a href="../Boundary/" class="md-nav__link">
         
   
   
@@ -760,10 +709,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../Software/FBP/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Filtered backprojection
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -774,6 +745,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generalities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-beam-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel beam reconstruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fan-beam-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fan beam reconstruction
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -801,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about_me/" class="md-nav__link">
+      <a href="../../about_me/" class="md-nav__link">
         
   
   
@@ -843,9 +861,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#scattering-power" class="md-nav__link">
+  <a href="#generalities" class="md-nav__link">
     <span class="md-ellipsis">
-      Scattering power
+      Generalities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-beam-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel beam reconstruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fan-beam-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fan beam reconstruction
     </span>
   </a>
   
@@ -870,9 +906,56 @@
   
 
 
-<h1 id="basic-physics">Basic physics<a class="headerlink" href="#basic-physics" title="Permanent link">#</a></h1>
-<p>A couple of notes. </p>
-<h2 id="scattering-power">Scattering power<a class="headerlink" href="#scattering-power" title="Permanent link">#</a></h2>
+<h1 id="filtered-backprojection">Filtered backprojection<a class="headerlink" href="#filtered-backprojection" title="Permanent link">#</a></h1>
+<h3 id="generalities">Generalities<a class="headerlink" href="#generalities" title="Permanent link">#</a></h3>
+<p>You want to reconstruct a (2D) density <span class="arithmatex">\(f(x,y)\)</span> based on line integrals of the form</p>
+<div class="arithmatex">\[ \int_L f(x,y) \mathrm{d}l  = -\ln \frac{I}{I_0}\]</div>
+<p>One line integral at <span class="arithmatex">\((\theta, t)\)</span> gives </p>
+<div class="arithmatex">\[ p(\theta, t) = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f(x,y) \: \delta(y\cos(\theta) - x\sin(\theta) - t) \: \mathrm{d}x \mathrm{d}x\]</div>
+<p>You measure that function for discrete values of <span class="arithmatex">\(\theta\)</span> and t by measuring the ratio of intensities.</p>
+<p>This can be inverted and leads to the filtered backprojection:</p>
+<div class="arithmatex">\[ f(x,y) = \int_{0}^{2\pi} p \ast g_{\infty} (\theta, y\cos \theta - x\sin \theta\:) \: \mathrm{d}\theta
+\]</div>
+<p>where <span class="arithmatex">\(\ast\)</span> represents the convolution (over t) and <span class="arithmatex">\(g_{\infty}\)</span> is the ramp-filter distribution. </p>
+<p>After discretization, this yields</p>
+<div class="arithmatex">\[f(x,y) = \frac{2\pi}{N_\theta} \sum_{n=0}^{N_{\theta} -1} \tilde{p}[n,k(x,y,\theta)]
+\]</div>
+<p>where <span class="arithmatex">\(\tilde{p}\)</span> is the convolution between the measured attenuation and the ramp filter and <span class="arithmatex">\(\Delta \theta = \frac{2\pi}{N_\theta}\)</span> is the angular step of the rotation scan. </p>
+<h3 id="parallel-beam-reconstruction">Parallel beam reconstruction<a class="headerlink" href="#parallel-beam-reconstruction" title="Permanent link">#</a></h3>
+<p>The index <span class="arithmatex">\(k\)</span> depends on the position to be reconstructed. 
+In the case of parallel beam reconstruction, the positions of the detector along <span class="arithmatex">\(t\)</span> are </p>
+<div class="arithmatex">\[t_k = (k + O_k + \frac{1}{2})\Delta t - t_{max}
+\]</div>
+<p>so that <span class="arithmatex">\(k\)</span> indexes the position <span class="arithmatex">\(k\Delta t\)</span> and <span class="arithmatex">\(\Delta t = \frac{2 t_{max}}{N_k}\)</span>.</p>
+<p>For a given position <span class="arithmatex">\((x,y)\)</span> on the grid to reconstruct, an interpolation is needed between the closest reconstructed points. </p>
+<p>For a given <span class="arithmatex">\(n\)</span> (or <span class="arithmatex">\(\theta = n\Delta \theta\)</span>). For a parallel beam, the offset can be used to gather more info during scans at redundant angles. </p>
+<h3 id="fan-beam-reconstruction">Fan beam reconstruction<a class="headerlink" href="#fan-beam-reconstruction" title="Permanent link">#</a></h3>
+<p>Single source rotating around the target. Fan angle <span class="arithmatex">\(\gamma\)</span>. The projections are now a function of <span class="arithmatex">\(\gamma\)</span> and <span class="arithmatex">\(\beta\)</span>. The position of the source is given by <span class="arithmatex">\((-R\cos(\beta), -R\sin(\beta))\)</span>. </p>
+<div class="arithmatex">\[p(\theta, t) \rightarrow p(\beta, \gamma)\]</div>
+<p>Similarly to the previous case, the discretization goes: </p>
+<div class="arithmatex">\[\gamma_k = (k + O_k + \frac{1}{2})\Delta \gamma - \gamma_{max}
+\]</div>
+<p>with <span class="arithmatex">\(\Delta \gamma = \frac{2 \gamma_{max}}{N_{\gamma}}\)</span></p>
+<p>and </p>
+<div class="arithmatex">\[\beta_j = j\Delta \beta
+\]</div>
+<p>with <span class="arithmatex">\(\Delta \beta = \frac{2 \pi}{N_{\beta}}\)</span></p>
+<p>For a flat detector, the convolution needs to be modified. First, the sampled attenuation depends on <span class="arithmatex">\(\beta\)</span> and <span class="arithmatex">\(a\)</span> where <span class="arithmatex">\(a\)</span> is the distance along the surface of the detector. </p>
+<div class="arithmatex">\[p(\beta, \gamma) = p^F(\beta, R\tan \gamma)\]</div>
+<p>or </p>
+<div class="arithmatex">\[p^F(\beta, a) = p(\beta, \arctan \frac{a}{R})\]</div>
+<p>The convolution requires a pre-factor: </p>
+<div class="arithmatex">\[\tilde{p}^F(\beta, a) = \left( p^F(\beta, a) \frac{R}{\sqrt{R^2+a^2}} \right) \ast g_{\infty}(a)
+\]</div>
+<p>And the backprojection requires a scaling as well</p>
+<div class="arithmatex">\[ f(x,y) = \int_{0}^{2\pi} \frac{R^2}{U(x,y,\beta)^2} \tilde{p}^F (\: \beta, a(x,y,\beta) \:)\: \mathrm{d}\beta
+\]</div>
+<p>The detector position is given by</p>
+<div class="arithmatex">\[a(x,y,\beta) = R\frac{-x\sin \beta + y\cos \beta }{R + x\cos \beta + y \sin \beta}
+\]</div>
+<p>and </p>
+<div class="arithmatex">\[U(x,y,\beta) = R + x \cos \beta + y \sin \beta
+\]</div>
 
 
 
@@ -921,12 +1004,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
